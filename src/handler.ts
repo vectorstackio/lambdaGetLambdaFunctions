@@ -25,8 +25,8 @@ export const handler = async () => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ functions })
     }
-  } catch (err) {
-    console.error('Failed to list Lambda functions:', err)
+  } catch {
+    console.error('Failed to list Lambda functions')
     return {
       statusCode: 500,
       headers: { 'Content-Type': 'application/json' },
